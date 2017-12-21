@@ -65,6 +65,7 @@ a {
 }
 a:hover, a:focus, a:active {
     color: #fff;
+    text-decoration: none;
 }
 
 #slider {
@@ -72,47 +73,200 @@ a:hover, a:focus, a:active {
     display: flex;
 }
 
-#slider > div {
-    position: relative;
-    height: 100%;
-    transition: width 0.5s;
+#slider h2 {
+    color: #fff;
+    margin-top: 0;
 }
 
-#slider > div .controls {
-    position: absolute;
-    top: 50%;
-    transform: translate(0, -50%);
-    font-size: 26px;
+#slider > div {
+    height: 100%;
+    transition: right 0.5s;
+}
+
+#slider .show-expanded {
+    display: none;
+}
+
+#slider .content .description {
+    margin-top: 50px;
+}
+
+#slider .content .description p {
+    margin-top: 5px;
+    font-family: Roboto-Thin;
+}
+
+#slider .content button {
+    color: #fff;
 }
 
 #slider #slider-blue {
+    position: relative;
     background: #305bce url(../images/slider-blue-bg.jpg) no-repeat;
-    width: 85%;
-}
-
-#slider #slider-blue .controls {
-    right: 45px;
+    background-size: cover;
+    width: 90%;
 }
 
 #slider #slider-blue .logo {
     padding: 83px 0 83px 110px;
 }
 
-#slider #slider-red {
-    background: #d21d43 url(../images/slider-red-bg.jpg) no-repeat top right;
-    width: 15%;
+#slider #slider-blue .content {
+    padding: 0 10% 0 20px;
+    display: flex;
 }
 
-#slider #slider-red .controls {
-    left: 45px;
+#slider #slider-blue .content button {
+    background-color: #d21d43;
+    border-color: #d21d43;
+}
+
+#slider #slider-blue .content .left-half {
+    text-align: right;
+    width: 50%;
+    margin-right: 20%;
+}
+
+#slider #slider-blue .content .right-half {
+    margin-top: -30px;
+}
+
+#slider #slider-blue .content .right-half .feature {
+    color: #b5baf1;
+    font-family: Roboto-Thin;
+    display: flex;
+    margin-bottom: 50px;
+}
+
+#slider #slider-blue .content .right-half .feature h3 {
+    margin-bottom: 5px;
+}
+
+#slider #slider-blue .content .right-half .feature p {
+    margin-top: 5px;
+}
+
+#slider #slider-blue .content .right-half .feature .description {
+    margin-top: 15px;
+}
+
+#slider #slider-blue .content .right-half .feature .icon {
+    margin-right: 10%;
+    width: 48px;
+}
+
+#slider #slider-blue .content .right-half .feature .icon img {
+    width: 48px;
+}
+
+#slider #slider-red {
+    position: absolute;
+    top: 0;
+    right: -40%;
+    background: #d21d43 url(../images/slider-red-bg.jpg) no-repeat top right;
+    background-size: cover;
+    width: 50%;
+    height: 800px;
+}
+
+#slider #slider-red.slider-expanded {
+    right: 0;
 }
 
 #slider #slider-red .menu {
     position: absolute;
-    left: 50%;
+    top: 90px;
+    left: 40px;
+    width: 80%;
+}
+
+#slider #slider-red .menu  ul {
+
+}
+
+#slider #slider-red .menu  ul li {
+    display: inline-block;
+    font-family: Roboto;
+    font-size: 14px;
+    padding: 10px;
+}
+
+#slider #slider-red .controls {
+    position: absolute;
+    top: 50%;
+    left: -45px;
+    transform: translate(0, -50%);
+    font-size: 26px;
+}
+
+#slider #slider-red .controls .slider-expand {
+    margin-right: 50px;
+}
+
+#slider #slider-red .menu-triggers .menu-trigger-open {
+    position: absolute;
+    left: 10%;
     top: 96px;
     transform: translate(-50%, 0);
     font-size: 26px;
+}
+
+#slider #slider-red .menu-triggers .menu-trigger-close {
+    position: absolute;
+    right: 10%;
+    top: 96px;
+    transform: translate(50%, 0);
+    font-size: 26px;
+}
+
+#slider #slider-red .content {
+    padding: 210px 20px 0 30%;
+}
+
+#slider #slider-red .content button {
+    background-color: #305bce;
+    border-color: #305bce;
+}
+
+@media (max-width: 1024px) {
+    #slider {
+        display: block;
+        height: auto;
+    }
+
+    #slider #slider-blue,
+    #slider #slider-red {
+        position: initial;
+        width: 100% !important;
+        height: 800px;
+    }
+
+    #slider #slider-blue .controls,
+    #slider #slider-red .menu-trigger-open,
+    #slider #slider-red .menu-trigger-close,
+    #slider #slider-red .menu,
+    #slider #slider-red .controls {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    #slider #slider-blue {
+        height: auto;
+    }
+
+    #slider #slider-blue .content {
+        display: block;
+    }
+
+    #slider #slider-blue .content .left-half {
+        width: 100%
+    }
+
+    #slider #slider-blue .content .right-half {
+        width: 100%;
+        padding: 30px 0 30px 110px;
+    }
 }
 
 .white-section {
@@ -125,6 +279,12 @@ h2 {
     margin-top: 150px;
     margin-bottom: 45px;
     color: #5284ff;
+}
+
+h3 {
+    font-family: Roboto-Light;
+    font-size: 26px;
+    color: #fff;
 }
 
 h4 {
