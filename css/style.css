@@ -413,13 +413,38 @@ h5 {
     position: relative;
 }
 
+.max-width {
+    padding-right: 0;
+}
+
 .right-section {
     background: url("../images/video-background.png") no-repeat;
     background-size: cover;
     width: 100%;
     height: 750px;
-    margin-right: -300px;
     text-align: center;
+}
+
+.left-section {
+    width: 600px;
+    margin: 0 0 0 auto;
+    padding-right: 10px;
+}
+
+@media (max-width: 1200px) {
+    .left-section {
+        width: 450px;
+        margin: 0 0 0 auto
+    }
+}
+
+@media (max-width: 991px) {
+    .left-section {
+        max-width: 800px;
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
 }
 
 .triangle {
@@ -428,19 +453,22 @@ h5 {
 
 @media (max-width: 1190px) {
     .right-section {
-        height: 900px;
+        height: 1015px;
     }
     .triangle {
         margin-top: 500px;
     }
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
     .right-section {
         height: 500px;
     }
     .triangle {
         margin-top: 225px;
+    }
+    .max-width {
+        padding-left: 0;
     }
 }
 
