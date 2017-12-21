@@ -250,6 +250,10 @@ a:hover, a:focus, a:active {
     #slider #slider-red .controls {
         display: none !important;
     }
+
+    #slider .hide-after-expanded {
+      display: initial !important;
+    }
 }
 
 @media (max-width: 768px) {
