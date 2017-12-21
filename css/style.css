@@ -308,7 +308,8 @@ h4 {
 button {
     background-color: transparent;
     border-radius: 28px;
-    border: 1px solid #dadee7;
+    border: 1px solid;
+    border-color: #dadee7;
     font-family: Roboto;
     font-size: 15px;
     letter-spacing: 1px;
@@ -316,12 +317,29 @@ button {
     padding: 12px 45px;
     margin: 50px 0;
     outline: none;
+    transition: all 0.3s ease-out;
 }
 
 button > span {
     margin-left: 15px;
 }
 
+.white-section button:hover,
+.gray-section button:hover,
+.movie-section button:hover {
+    border-color: #2754cc;
+}
+
+.red-section button:hover {
+    border-color: #2754cc;
+}
+
+.blue-section button:hover,
+.green-section button:hover,
+.red-section button:hover {
+    color: #b7b4b8;
+    border-color: #b7b4b8;
+}
 
 .image-right {
     width: 80%;
@@ -341,8 +359,8 @@ button > span {
 
 @media (max-width: 992px) {
     .image-right {
-        width: 100%;
-        margin-top: 50px;
+        width: 70%;
+        margin: 50px auto 0 auto;
     }
 }
 
