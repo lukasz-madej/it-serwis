@@ -121,6 +121,12 @@ a:hover, a:focus, a:active {
 #slider #slider-blue .content button {
     background-color: #d21d43;
     border-color: #d21d43;
+    transition: all 0.3s;
+}
+
+#slider #slider-blue .content button:hover {
+  background-color: #305bce;
+  border-color: #305bce;
 }
 
 #slider #slider-blue .content .left-half {
@@ -228,6 +234,12 @@ a:hover, a:focus, a:active {
 #slider #slider-red .content button {
     background-color: #305bce;
     border-color: #305bce;
+    transition: all 0.3s;
+}
+
+#slider #slider-red .content button:hover {
+  background-color: #d21d43;
+  border-color: #d21d43;
 }
 
 @media (max-width: 1024px) {
