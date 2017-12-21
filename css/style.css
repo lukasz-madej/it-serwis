@@ -125,6 +125,7 @@ h2 {
     margin-top: 120px;
     margin-bottom: 45px;
     color: #5284ff;
+    line-height: 1.2;
 }
 
 h4 {
@@ -219,9 +220,18 @@ h5 {
 }
 
 .red-section {
-    background: url("../images/red-header.png") no-repeat;
+    background: url("../images/red-section.png") no-repeat;
     background-size: cover;
     padding-bottom: 100px;
+}
+
+.red-section .img-wrapper {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 .white {
@@ -234,7 +244,8 @@ h5 {
 }
 
 .img-small {
-    width: 40%;
+    width: 80%;
+    position: relative;
 }
 
 .right-section {
@@ -292,8 +303,42 @@ h5 {
     padding-bottom: 100px;
 }
 
+.blue-section .img-wrapper {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.single-line-title {
+    margin-top: 33px;
+}
+
 .blue {
     color: #7ca1fe;
+}
+
+.text-wrapper {
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.gdr-section .button-small {
+    padding: 10px 22px;
+}
+
+.gray-section .img-wrapper {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 .green-section {
@@ -302,15 +347,24 @@ h5 {
     padding-bottom: 100px;
 }
 
+.green-section .img-wrapper {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
 section .small-text {
     color: #fff;
     padding: 10px 20px 0 20px;
 }
 
-.footer {
-    height: 152px;
+footer {
     background-color: #262626;
     border-color: transparent;
+    border-radius: 0;
 }
 
 .footer-list {
@@ -321,7 +375,7 @@ section .small-text {
 
 .footer-text {
     font-family: Roboto, sans-serif;
-    font-size: 15px;
+    font-size: 13px;
     line-height: 150px;
 }
 
@@ -331,9 +385,10 @@ section .small-text {
 
 .footer-list > li > a {
     font-family: Roboto, sans-serif;
-    font-size: 15px;
+    font-size: 13px;
     line-height: 150px;
     padding: 0 20px;
+    text-decoration: none;
 }
 
 .footer-list > li > a > img {
