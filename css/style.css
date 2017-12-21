@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(../fonts/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: 'Roboto-Thin';
+    src: url(../fonts/Roboto-Thin.ttf);
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -25,6 +34,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
     line-height: 1;
+    color: #fff;
+    font-family: Roboto;
 }
 ol, ul {
     list-style: none;
@@ -40,4 +51,58 @@ q:before, q:after {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+}
+a {
+    color: #fff;
+}
+a:hover, a:focus, a:active {
+    color: #fff;
+}
+
+#slider {
+    height: 800px;
+    display: flex;
+}
+
+#slider > div {
+    position: relative;
+    height: 100%;
+    transition: width 0.5s;
+}
+
+#slider > div .controls {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: 26px;
+}
+
+#slider #slider-blue {
+    background: #305bce url(../images/slider-blue-bg.jpg) no-repeat;
+    width: 85%;
+}
+
+#slider #slider-blue .controls {
+    right: 45px;
+}
+
+#slider #slider-blue .logo {
+    padding: 83px 0 83px 110px;
+}
+
+#slider #slider-red {
+    background: #d21d43 url(../images/slider-red-bg.jpg) no-repeat top right;
+    width: 15%;
+}
+
+#slider #slider-red .controls {
+    left: 45px;
+}
+
+#slider #slider-red .menu {
+    position: absolute;
+    left: 50%;
+    top: 96px;
+    transform: translate(-50%, 0);
+    font-size: 26px;
 }
